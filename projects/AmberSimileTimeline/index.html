@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amber Simile Timeline Project</title>
+<script src="../../js/amber.js" type="text/javascript"></script>
+<script src="../../js/xdate.js" type="text/javascript"></script>
+<script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>
+
+<script type="text/javascript">
+loadAmber({
+    files: ['SimileTimeline.js','SimileTimeline-Tests.js'],
+    prefix: 'projects/ambersimiletimeline/js', // path for js files i think
+    ready: function() {
+      $(function() {
+        smalltalk.SimTLTimelineManager._new()._begin();
+      });
+}}); 
+</script>
+</head>
+    <body>
+    <article>
+      <h1>Amber Simile Timeline</h1>
+      <button onclick="smalltalk.Browser._open()">class browser</button>
+	<button id="createTimeline">create timeline</button>
+      <button id="addEvent">add event</button>
+	 <button id="moveCentre">move centre</button>
+    </article>
+	 <div id="my-timeline" style="height: 150px; border: 1px solid #aaa"></div>
+	</body>
+
+</html>
